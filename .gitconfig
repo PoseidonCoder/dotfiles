@@ -1,3 +1,5 @@
 [user]
 	email = computorgenius@gmail.com
 	name = PoseidonCoder
+[credential]
+	helper = cache
