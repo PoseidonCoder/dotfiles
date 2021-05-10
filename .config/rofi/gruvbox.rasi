@@ -1,0 +1,28 @@
+configuration {
+	font:        "System San Francisco 13";
+	show-icons:  true;
+	icon-theme:  "Vimix-dark"; 
+	lines:       3;
+	display-run: ">";
+	opacity: 0.5;
+}
+
+* {
+	bg-color: #ebdbb2;
+	bg-color-active: #d79921;
+	text-color: #a89984;
+	text-color-active: #fbf1c7;
+
+	background-color: @bg-color;
+	foreground: @text-color;
+}
+
+#window {
+	border-radius: 50px;
+	padding: 20px;
+}
+
+#element selected active {
+	background-color: @bg-color-active;
+	color: @text-color-active;
+}

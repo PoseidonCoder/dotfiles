@@ -1,0 +1,27 @@
+* {
+    background-color: #2E3440;
+    border-color:     White;
+    text-color:       White;
+    font:             "Hack Nerd Font 13";
+    display-run: ">";
+}
+
+#horibox {
+    orientation: horizontal;
+    children:   [ prompt, entry, listview ];
+}
+
+#listview {
+    layout:     horizontal;
+    spacing:    10px;
+    lines:      100;
+}
+
+#element {
+    padding: 8px;
+}
+
+#element selected {
+    background-color: #4C566A;
+    color: #ECEFF4;
+}
