@@ -1,4 +1,4 @@
 # dotfiles
-My personal Linux configurations
+a clean artic nord rice
 
 ![](rice.png)
