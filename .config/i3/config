@@ -50,7 +50,7 @@ bindsym $mod+Return exec gnome-terminal
 bindsym $mod+Shift+q kill
 
 # start rofi
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show-icons -modi drun -show drun -display-drun ">>>"
 
 # change focus
 bindsym $mod+j focus left
@@ -139,6 +139,7 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # All screens
 # lock screen
 bindsym $mod+Shift+e exec "betterlockscreen -l blur"
 # reload the configuration file
@@ -182,11 +183,11 @@ bar {
 	i3bar_command i3bar -t
 	position top
 	tray_padding 0
-	font pango: Font Awesome 5 Free 13
+	font pango: Source Code Pro Bold 13
 	workspace_min_width 60
 	colors {
-		background         #00000035
-		statusline         #FFFFFF99
+		background         #00000000
+		statusline         #FFFFFF900
 		separator          #757575
 		focused_workspace  $bg-color          $bg-color          $text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
@@ -195,7 +196,7 @@ bar {
 }
 
 exec_always compton --config ~/.config/compton.conf
-exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
+exec_always feh --bg-fill ~/Pictures/wallpaper.png
 
 # i3-gaps
 gaps inner 6
